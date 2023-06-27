@@ -7,7 +7,7 @@ Simple autoclicker in python.
 Running the autoclicker for some time
 
 ```python
-from Autoclicker_geo.autoclicker import Autoclicker
+from autoclickerPy import Autoclicker
 from pynput.mouse import Button
 
 clicker = Autoclicker(delay=0.1, mouseButton=Button.left)
@@ -19,7 +19,7 @@ clicker.run(1)
 Starting and stoping the autoclicker
 
 ```python
-from Autoclicker_geo.autoclicker import Autoclicker
+from autoclickerPy import Autoclicker
 from pynput.mouse import Button
 import time
 

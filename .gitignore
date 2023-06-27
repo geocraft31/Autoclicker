@@ -4,4 +4,4 @@ __pycache/
 Start.ps1
 build/
 dist/
-autoclicker_geo.egg-info/
+*.egg-info/

@@ -82,5 +82,5 @@ class Autoclicker:
         # private! Not for public use
         
         while not self._stopEvent.is_set():
-            self._mouse.click(self._mouseButton)
-            time.sleep(self._delay)
+            self._mouse.click(self.mouseButton)
+            time.sleep(self.delay)

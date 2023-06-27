@@ -7,13 +7,13 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.0.3'
+VERSION = '0.0.2'
 DESCRIPTION = 'Simple autoclicker for python'
 LONGDESCRIPTION = 'Simple autoclicker for python long description'
 
 # Setting up
 setup(
-    name="autoclicker_geo",
+    name="autoclickerPy",
     version=VERSION,
     author="Geo",
     author_email="<geocraft31@gamil.com>",
