@@ -26,6 +26,6 @@ import time
 clicker = Autoclicker(delay=0.1, mouseButton=Button.left)
 
 clicker.start()
-time.sleep(1)
+ ... some code ...
 clicker.stop()
 ```
