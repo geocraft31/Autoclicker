@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+autoclicker_geo.egg-info/PKG-INFO
+autoclicker_geo.egg-info/SOURCES.txt
+autoclicker_geo.egg-info/dependency_links.txt
+autoclicker_geo.egg-info/requires.txt
+autoclicker_geo.egg-info/top_level.txt
+src/__init__.py
+src/autoclicker.py

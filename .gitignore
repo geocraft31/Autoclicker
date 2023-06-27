@@ -2,3 +2,6 @@ Environment/
 __pycache/
 .vscode/
 Start.ps1
+build/
+dist/
+autoclicker.egg-info/
