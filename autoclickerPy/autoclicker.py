@@ -75,7 +75,11 @@ class Autoclicker:
             raise ValueError("Variable `timeSec` can't be 0 or below")
 
         self.start()
-        time.sleep(timeSec)
+        now = time.time()
+        while time.time() - now < timeSec:
+            if not self.active:
+                return
+            time.sleep(0.01)
         self.stop()
 
     def _clicker(self):

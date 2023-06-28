@@ -5,3 +5,4 @@ Start.ps1
 build/
 dist/
 *.egg-info/
+commands.ps1
