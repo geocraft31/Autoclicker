@@ -32,19 +32,22 @@ class Autoclicker:
         Runs the autoclicker for `time` seconds
 
     """
-    def __init__(self, delay: float, mouseButton: Button) -> None:
+    def __init__(self, delay: float) -> None:
 
         self.delay = delay
         self._mouse = Controller()
-        self.mouseButton = mouseButton
         self._clickingThread = Thread(target=self._clicker, name="Clicker")
         self._stopEvent = Event()
         self.active = False
 
         
-    def start(self):
-        """Starts the autoclicker object
+    def start(self, button: Button = Button.left):
+        """Start the autoclicker
+
+        Args:
+            button (Button, optional): The mouse button to click. Defaults to Button.left.
         """
+        self.mouseButton = button
         self._stopEvent.clear()
         self.active = True
         if not self._clickingThread.is_alive():
@@ -62,18 +65,19 @@ class Autoclicker:
             self._clickingThread.join()
 
 
-    def run(self, timeSec: float):
+    def run(self, timeSec: float, button: Button = Button.left):
         """Starts the autoclicker for `timeSec` seconds
 
         Args:
             timeSec (float): The time the autoclicker is running
-        
+            button (Button, optional): The mouse button to click. Defaults to Button.left.
+            
         Raises:
             ValueError: if `timeSec` <= 0
         """
         if timeSec <= 0:
             raise ValueError("Variable `timeSec` can't be 0 or below")
-
+        self.mouseButton = button
         self.start()
         now = time.time()
         while time.time() - now < timeSec:

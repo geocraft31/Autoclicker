@@ -10,7 +10,7 @@ Running the autoclicker for some time
 from autoclickerPy import Autoclicker
 from pynput.mouse import Button
 
-clicker = Autoclicker(delay=0.1, mouseButton=Button.left)
+clicker = Autoclicker(delay=0.1)
 
 # Runs autoclicker for 1 second
 clicker.run(1)
@@ -23,9 +23,9 @@ from autoclickerPy import Autoclicker
 from pynput.mouse import Button
 import time
 
-clicker = Autoclicker(delay=0.1, mouseButton=Button.left)
+clicker = Autoclicker(delay=0.1)
 
-clicker.start()
+clicker.start(button=Button.middle)
  ... some code ...
 clicker.stop()
 ```
